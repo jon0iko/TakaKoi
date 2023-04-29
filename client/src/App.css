@@ -1,0 +1,15 @@
+fbody {
+	font-family: Arial, sans-serif;
+}
+
+body {
+	background-color: #dacbcb;
+	color: rgb(83, 75, 75);
+
+}
+
+ h2 {
+	margin-top: 5;
+	font-family: 'Fira Sans', 'Sans-serif';
+  text-align: center;
+}
