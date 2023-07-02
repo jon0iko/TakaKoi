@@ -6,7 +6,7 @@ const Edit = ({ expense }) => {
     try {
       const body = { amount, description };
 
-      const response = await fetch(`http://localhost:5000/expense/${id}`, {
+      const response = await fetch(`/expense/${id}`, {
         method: "PUT",
         headers: { "Content-type": "application/json" },
         body: JSON.stringify(body),

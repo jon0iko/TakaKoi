@@ -8,7 +8,7 @@ const List = () => {
   //delete function
   async function deleteExpense(id) {
     try {
-      const response = await fetch(`http://localhost:5000/expense/${id}`, {
+      const response = await fetch(`/expense/${id}`, {
         method: "DELETE",
       });
 
@@ -20,7 +20,7 @@ const List = () => {
 
   //list function
   async function getList() {
-    const res = await fetch("http://localhost:5000/expense");
+    const res = await fetch("/expense");
 
     const expenseArray = await res.json();
     setExpenses(expenseArray);
@@ -47,7 +47,7 @@ const List = () => {
         <tbody>
           {expenses.map((expense) => (
             <tr key={expense.id}>
-              <td>{expense.amount}</td>
+              <td>{expense.amount}</td> 
               <td>{expense.description}</td>
               <td>{expense.datevalue}</td>
               <td><Edit expense={expense}/></td>

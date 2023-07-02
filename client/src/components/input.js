@@ -8,7 +8,7 @@ const Input = () => {
     e.preventDefault();
     try {
       const body = { amount, description };
-      const response = await fetch("http://localhost:5000/expense", {
+      const response = await fetch("/expense", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body),
