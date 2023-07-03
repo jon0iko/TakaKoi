@@ -8,7 +8,7 @@ const Input = () => {
     e.preventDefault();
     try {
       const body = { amount, description };
-      const response = await fetch("/expense", {
+      const response = await fetch(`${process.env.REACT_APP_API}/expense`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body),

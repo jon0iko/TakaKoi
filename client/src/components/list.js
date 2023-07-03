@@ -8,7 +8,7 @@ const List = () => {
   //delete function
   async function deleteExpense(id) {
     try {
-      const response = await fetch(`/expense/${id}`, {
+      const response = await fetch(`${process.env.REACT_APP_API}/expense/${id}`, {
         method: "DELETE",
       });
 
@@ -20,7 +20,7 @@ const List = () => {
 
   //list function
   async function getList() {
-    const res = await fetch("/expense");
+    const res = await fetch(`${process.env.REACT_APP_API}/expense`);
 
     const expenseArray = await res.json();
     setExpenses(expenseArray);

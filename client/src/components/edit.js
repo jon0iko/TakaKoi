@@ -6,7 +6,7 @@ const Edit = ({ expense }) => {
     try {
       const body = { amount, description };
 
-      const response = await fetch(`/expense/${id}`, {
+      const response = await fetch(`${process.env.REACT_APP_API}/expense/${id}`, {
         method: "PUT",
         headers: { "Content-type": "application/json" },
         body: JSON.stringify(body),
