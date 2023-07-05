@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+const url = process.env.BASE_URL;
 
 const Edit = ({ expense }) => {
   const [description, setDescription] = useState(expense.description);
@@ -6,7 +7,7 @@ const Edit = ({ expense }) => {
     try {
       const body = { amount, description };
 
-      const response = await fetch(`${process.env.REACT_APP_API}/expense/${id}`, {
+      const response = await fetch(`${url}/expense/${id}`, {
         method: "PUT",
         headers: { "Content-type": "application/json" },
         body: JSON.stringify(body),

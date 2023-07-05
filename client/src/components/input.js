@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+const url = process.env.BASE_URL;
+
 
 const Input = () => {
   const [amount, setAmount] = useState("");
@@ -8,7 +10,7 @@ const Input = () => {
     e.preventDefault();
     try {
       const body = { amount, description };
-      const response = await fetch(`${process.env.REACT_APP_API}/expense`, {
+      const response = await fetch(`${url}/expense`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body),

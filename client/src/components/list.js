@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Edit from "./edit";
+const url = process.env.BASE_URL;
 
 
 const List = () => {
@@ -8,7 +9,7 @@ const List = () => {
   //delete function
   async function deleteExpense(id) {
     try {
-      const response = await fetch(`${process.env.REACT_APP_API}/expense/${id}`, {
+      const response = await fetch(`${url}/expense/${id}`, {
         method: "DELETE",
       });
 
@@ -20,7 +21,7 @@ const List = () => {
 
   //list function
   async function getList() {
-    const res = await fetch(`${process.env.REACT_APP_API}/expense`);
+    const res = await fetch(`${url}/expense`);
 
     const expenseArray = await res.json();
     setExpenses(expenseArray);
