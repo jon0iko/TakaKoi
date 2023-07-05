@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Edit from "./edit";
-const url = process.env.BASE_URL;
+const url = process.env.REACT_APP_APIURL;
 
 
 const List = () => {

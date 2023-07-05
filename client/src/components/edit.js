@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-const url = process.env.BASE_URL;
+const url = process.env.REACT_APP_APIURL;
 
 const Edit = ({ expense }) => {
   const [description, setDescription] = useState(expense.description);
