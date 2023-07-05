@@ -9,11 +9,11 @@ const List = () => {
   //delete function
   async function deleteExpense(id) {
     try {
-      const response = await fetch(`${url}/expense/${id}`, {
+      await fetch(`${url}/expense/${id}`, {
         method: "DELETE",
       });
 
-      setExpenses(expenses.filter((expense) => expense.id != id));
+      setExpenses(expenses.filter((expense) => expense.id !== id));
     } catch (error) {
       console.log(error.message);
     }
