@@ -22,7 +22,7 @@ const List = () => {
   //list function
   async function getList() {
     const res = await fetch(`${url}/expense`);
-
+    console.log(`${url}/expense`);
     const expenseArray = await res.json();
     setExpenses(expenseArray);
   }
