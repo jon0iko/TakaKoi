@@ -28,8 +28,11 @@ const List = () => {
   }
 
   useEffect(() => {
-    setInterval(getList(), 3000);
-  }, []);
+    const interval = setInterval(() => {
+      getList();
+      },3000);
+      return () => clearInterval(interval);
+    }, []);
 
   return (
     <>
