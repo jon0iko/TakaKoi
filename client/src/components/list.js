@@ -28,7 +28,7 @@ const List = () => {
   }
 
   useEffect(() => {
-    getList();
+    setInterval(getList(), 3000);
   }, []);
 
   return (
